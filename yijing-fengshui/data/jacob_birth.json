@@ -1,0 +1,12 @@
+{
+  "name": "Jacob",
+  "birth_date_gregorian": "1987-03-06",
+  "birth_time": "02:30",
+  "birth_time_chinese": "丑时 (01:00-03:00)",
+  "birth_place": "甘肃省玉门市人民医院",
+  "timezone": "Asia/Shanghai (UTC+8)",
+  "lunar_date_estimated": "丁卯年二月初七",
+  "gender": "male (assumed)",
+  "stored_at": "2026-06-07",
+  "note": "原始出生信息，来源：用户提供。后续八字推算需要用户用万年历核对日柱。"
+}

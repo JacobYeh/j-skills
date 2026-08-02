@@ -1,0 +1,29 @@
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Python (j-skills 几乎不用, 留个底) =====
+__pycache__/
+*.pyc
+*.pyo
+
+# ===== Sensitive (defense in depth) =====
+# 私人数据已经在 private repo, 但额外加层保护
+*.bak
+*.tmp
+*~
+*.lock
+
+# ===== 不要在 j-skills 推代码 =====
+scripts/
+*.py
+!yijing-fengshui/SKILL.md
+!yijing-fengshui/README.md
