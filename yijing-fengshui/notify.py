@@ -18,7 +18,7 @@ from pathlib import Path
 
 def _load_push_hub():
     """用 importlib 加载 push-hub."""
-    ph_scripts = Path.home() / ".openclaw" / "skills" / "push-hub" / "scripts" / "__init__.py"
+    ph_scripts = Path.home() / "projects" / "push-hub" / "scripts" / "__init__.py"
     if not ph_scripts.exists():
         raise ImportError("push-hub 不存在: " + str(ph_scripts))
     spec = importlib.util.spec_from_file_location("push_hub_scripts", ph_scripts)

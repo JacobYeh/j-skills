@@ -51,3 +51,4 @@ python3 notify.py --text "test" --dry-run
 ```
 
 配置: 飞书 app_id / app_secret / chat_id 在 `~/.openclaw/openclaw.json` (跟 finance-advisor 共享)。
+push-hub: 独立 repo [JacobYeh/push-hub](https://github.com/JacobYeh/push-hub) (本地 `~/projects/push-hub/`).

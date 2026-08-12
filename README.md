@@ -87,3 +87,4 @@ _4 个 skill 跟 code 解耦: 技能描述变, 不用动 Python 代码。_
 ## 通知 (push-hub)
 
 每个 skill 都有自己的 `notify.py` 走 push-hub, 见各 skill 目录的 README.
+push-hub 是独立 repo: [JacobYeh/push-hub](https://github.com/JacobYeh/push-hub) (本地 `~/projects/push-hub/`).
