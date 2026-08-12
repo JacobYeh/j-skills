@@ -230,7 +230,7 @@ All four jobs send directly to Jacob via Feishu DM and wait for his reply before
 ```
 你是一个周计划助理 J-Plan.
 
-1. 读 planning.md 最新一周的"🎯 本周目标"区（在 C:\Users\Jacob\.mavis\skills\j-plan\planning.md）
+1. 读 planning.md 最新一周的"🎯 本周目标"区（skill 目录下的 `planning.md`）
 2. 通过 Feishu DM 给 Jacob 发一条简短问候 + 4 字段微前瞻:
    - 本周最重要的 1 件事 (from planning.md, 一句话)
    - 5 个动作纪律里本周最重点的 1 个
@@ -239,7 +239,7 @@ All four jobs send directly to Jacob via Feishu DM and wait for his reply before
 3. 短结尾: "周一早上 9 点 09:00 你确认下要不要调"
 4. 等回复. 收到后写回 planning.md 对应周的"跨期任务"区 (不重写其他部分).
 
-Target: user:ou_a80f649da4fc26e7e5975fe992a0fbc4
+Target: Jacob 个人 DM (user:ou_xxx — 从 push-hub chat config 自动取)
 ```
 
 **改动点（vs 老版）：**
@@ -274,7 +274,7 @@ Target: user:ou_a80f649da4fc26e7e5975fe992a0fbc4
    - **如果 5 字段分 < 3，加一句 (≤ 2 行) 观察；否则静默结束**
    - **不追问**
 
-Target: user:ou_a80f649da4fc26e7e5975fe992a0fbc4
+Target: Jacob 个人 DM (user:ou_xxx — 从 push-hub chat config 自动取)
 ```
 
 **改动点（vs 老版）：**
@@ -294,13 +294,13 @@ Target: user:ou_a80f649da4fc26e7e5975fe992a0fbc4
 **Prompt:**
 ```
 You are J-Plan assistant. Your role:
-1. Read planning_raw.txt at /home/ubuntu/.openclaw/workspace/skills/j-plan/planning_raw.txt
+1. Read planning.md (skill 目录下, 已合并 2019-2026 全部历史 — 旧 `planning_raw.txt` 已废弃)
 2. Determine the current month and next month
-3. Search planning_raw.txt for all weekly entries in the current month
+3. Search planning.md for all weekly entries in the current month
 4. Generate a monthly review + next month proposal:
 
-Send the report directly to Jacob via Feishu DM (target: user:ou_a80f649da4fc26e7e5975fe992a0fbc4).
-Wait for Jacob's reply, then write the agreed monthly plan into planning_raw.txt (append as monthly entry) and update history-index.md.
+Send the report directly to Jacob via Feishu DM.
+Wait for Jacob's reply, then write the agreed monthly plan into planning.md (append as monthly entry) and update history-index.md.
 ```
 
 ---
@@ -314,12 +314,12 @@ Wait for Jacob's reply, then write the agreed monthly plan into planning_raw.txt
 **Prompt:**
 ```
 You are J-Plan assistant. Your role:
-1. Read planning_raw.txt at /home/ubuntu/.openclaw/workspace/skills/j-plan/planning_raw.txt
+1. Read planning.md (skill 目录下, 已合并 2019-2026 全部历史)
 2. Determine the current year and calculate all monthly entries for it
 3. Generate a full year review + next year proposal:
 
-Send the report directly to Jacob via Feishu DM (target: user:ou_a80f649da4fc26e7e5975fe992a0fbc4).
-Wait for Jacob's reply, then write the agreed yearly plan into planning_raw.txt (append as new year entry) and update history-index.md.
+Send the report directly to Jacob via Feishu DM.
+Wait for Jacob's reply, then write the agreed yearly plan into planning.md (append as new year entry) and update history-index.md.
 ```
 
 ---
@@ -344,11 +344,11 @@ Wait for Jacob's reply, then write the agreed yearly plan into planning_raw.txt 
 
 ## Data Storage
 
-- **Primary:** `C:\Users\Jacob\.mavis\skills\j-plan\planning.md` (Windows)
-- **Index:** `C:\Users\Jacob\.mavis\skills\j-plan\history-index.md`
-- **Logs:** `C:\Users\Jacob\.mavis\skills\j-plan\activity-log.md`
+- **Primary:** `planning.md` (skill 目录)
+- **Index:** `history-index.md`
+- **Logs:** `activity-log.md`
 
-> ⚠️ 旧路径 `~/.openclaw/workspace/skills/j-plan/*` 是 Linux 同步位置, 当前 Windows 直接读本地。Mac/Linux 部署时再回归相对路径。
+> 💡 路径都是相对 skill 目录, Mac/Linux/Windows 一致。旧 Windows 路径 `C:\Users\Jacob\.mavis\skills\j-plan/*` 已废弃 (Planning.one → planning.md 转换完成)。
 
 ---
 
