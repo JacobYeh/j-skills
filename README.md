@@ -26,7 +26,6 @@ j-skills/
 ├── j-plan/                         # 个人计划
 │   ├── SKILL.md                    # Mavis skill 描述
 │   ├── planning.md                 # 主计划 (年度/月度/周)
-│   ├── planning-template.md        # 模板
 │   ├── activity-log.md             # 活动日志
 │   └── history-index.md            # 历史索引
 ├── j-work/                         # IT 工作

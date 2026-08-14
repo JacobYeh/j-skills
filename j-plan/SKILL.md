@@ -73,7 +73,7 @@ A weekly cron job (`J-Plan-Weekly-Review`) runs every **Sunday 8:00 PM (Asia/Sha
 
 #### Step 1 — AI 推送（开篇问候 + 5 字段收件箱）
 
-> 💬 推送内容模板（发送至 Jacob via Feishu DM, `user:ou_a80f649da4fc26e7e5975fe992a0fbc4`）：
+> 💬 推送内容模板（发送至 Jacob via Feishu DM, `user:ou_xxx — 从 push-hub chat config 自动取`）：
 > 
 > ```
 > 周日 8 点了, 走个 30 秒版

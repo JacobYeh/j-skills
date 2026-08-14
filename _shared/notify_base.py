@@ -80,8 +80,3 @@ def run_with_source(source: str, description: str | None = None) -> int:
         return 1
 
     return 0 if ok else 2
-
-
-# Backward-compat aliases (供已有 import 使用)
-def _load_push_hub_compat():
-    return _load_push_hub()
