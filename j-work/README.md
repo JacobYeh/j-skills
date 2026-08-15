@@ -449,5 +449,5 @@ python3 notify.py --file planning.md --title "周计划" --priority high
 python3 notify.py --text "test" --dry-run
 ```
 
-配置: 飞书 3 个 key (`FEISHU_APP_ID` / `FEISHU_APP_SECRET` / `FEISHU_CHAT_ID`) 在 `~/.config/mavis/secrets/secrets.env` (age-encrypted, bashrc 自动 decrypt).
+配置: 飞书 3 个 key (`FEISHU_APP_ID` / `FEISHU_APP_SECRET` / `FEISHU_CHAT_ID`) 在 `~/.config/finance-advisor/secrets/secrets.env` (age-encrypted, bashrc 自动 decrypt).
 push-hub: 独立 repo [JacobYeh/push-hub](https://github.com/JacobYeh/push-hub) (本地 `~/projects/push-hub/`).
