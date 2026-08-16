@@ -18,8 +18,16 @@ from pathlib import Path
 
 
 def _load_push_hub():
-    """用 importlib 加载 push-hub (避免跟 skill 的 scripts/ 冲突)."""
-    ph_scripts = Path.home() / "projects" / "push-hub" / "scripts" / "__init__.py"
+    """用 importlib 加载 push-hub (避免跟 skill 的 scripts/ 冲突).
+
+    路径解析: 默认 ~/projects/push-hub, 可通过 env Mavis_PUSH_HUB_PATH 覆盖.
+    例: Mavis_PUSH_HUB_PATH=/opt/push-hub (dev/staging/prod 多环境切换)
+    """
+    push_hub_root = Path(os.environ.get(
+        "Mavis_PUSH_HUB_PATH",
+        str(Path.home() / "projects" / "push-hub"),
+    ))
+    ph_scripts = push_hub_root / "scripts" / "__init__.py"
     if not ph_scripts.exists():
         raise ImportError("push-hub 不存在: " + str(ph_scripts))
     spec = importlib.util.spec_from_file_location("push_hub_scripts", ph_scripts)
