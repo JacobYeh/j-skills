@@ -1,7 +1,7 @@
 # J-Plan History Index
 
 > 维护中. 每周日 review 后由 ai / cron 增量更新.
-> Last sync: 2026-07-26 (W31 占位). W32 / W33 待补.
+> Last sync: 2026-08-16 (W31 完成, W32/W33 代码侧完成, 7 月复盘+8月规划框架已立, 生活侧等 Jacob 补).
 > 详细活动: 见 `activity-log.md`.
 
 **Schema**: 每周 (week_number, year) **恰好 1 行**. 重复行 (如 W31 曾出现 2 行)
@@ -20,7 +20,7 @@
 | Month | Summary | Status |
 |-------|---------|--------|
 | 2026-May | 工作高效、自由泳、时间优化 | 进行中 |
-| 2026-Jun | AI 学习深化月(VDI / Claude 培训 / MCP) | 进行中 |
+| 2026-Jul | **"减法稳态 + 副业方向切换"月**: W27 识 "运动被游泳拖累" (commitment device 缺) → 7 月只想 AI 进步;W28-29 减法微对策验证通过 (闭嘴+工作日 AI 双双进步, 6 项纪律首次数据全齐均分 3.5);W30 实习生 "自动化" 完成 + 副业双线 (交易自动化 + city walk) 启动;W31 VIP 服务 facility + 副业 pending;7/31 cron 月度复盘 **计划外延** (cron 实际未自动跑, 见 D.1 根因);整体: 6 项纪律均分稳定 3.5 (抬档乏力但未掉), 运动从波动回归中, 工作受表扬, **副业方向从"AI 反哺"切换到"贴近本职"** | 完成 (复盘数据已有, 待 Jacob 合并到 planning.md) |
 
 ## 周计划 (近 8 周)
 
@@ -38,10 +38,10 @@
 | W28 | Jul 6-12 | 7 月首周:a/b/d 完成 + g 推进中(4.5/7);AI 沉淀 1 个;hypergym × 2 超预期;游泳 2 次含台风补(封顶 4 次);纪律均分 2.83(<3 触发 AI 追加);AI 观察"加法稳/减法弱" | 完成 |
 | W29 | Jul 13-19 | 7 月第 2 周:a 实习生 perfect;减法微对策验证通过(闭嘴+工作日 AI + iPad 3 项全 3+);d 5/5 满;c 持续进步"用起来"有难度;g 推迟;运动 1 次低点;6 项纪律首次数据全齐均分 3.5;副业转向"交易自动化研究" | 完成 |
 | W30 | Jul 20-26 | 7 月第 3 周:**a 实习生"自动化"完成**(结构性变化);loan laptop 完成;c VDI 技能发布等 approve;"用起来"接近;3460 决策:难度过高,挪 8 月;副业双线定义完成但 W30 未启动;运动 4 次;周末"有意义的玩"不错;纪律 6 项全齐 均分 3.5(持平 W29,抬档乏力,唯一成功 iPad 3→4) | 完成 |
-| W31 | Jul 27 - Aug 2 | 7 月收尾周:**VIP 一周(7/27-8/2)服务 facility**(13:24 合并)+ **APAC 暗流/闭嘴**;副业 pending(W32+ 8 月再启);25m 独立游让位给 VIP 推 W32;纪律不抬档稳态 3.5 维持(只微抬看书 3→4);7/31 cron 月度复盘 + 8 月整体思考 | 计划中 |
-| W32 | Aug 3-9 | _待补 — 上周未填周报_ | 占位 |
-| W33 | Aug 10-16 | _当前周 — planning.md 暂缺_ | 占位 |
-| 2026-Aug | _8 月整体规划待 7/31 月度复盘后写_ | 占位 |
+| W31 | Jul 27 - Aug 2 | 7 月收尾周:**VIP 一周(7/27-8/2)服务 facility**(13:24 合并)+ **APAC 暗流/闭嘴**;副业 pending(W32+ 8 月再启);25m 独立游让位给 VIP 推 W32;纪律不抬档稳态 3.5 维持(只微抬看书 3→4);7/31 cron 月度复盘 + 8 月整体思考 | 完成 (7/31 cron 月度复盘计划外延至 8 月) |
+| W32 | Aug 3-9 | **finance-advisor v2 重构主战周**: 4-core simplification (`3082e68`) + 22 hardening fixes (`655cbd6`) + market.py 切 Finnhub 主 Twelve Data 备 (`adbe8c1`) + push 全部迁移 push-hub (`98d45d1`, merged PR `4dfb404`) + dedup 自学日志 + ignore `.bak.v1` (`c4e1157`) + 集成 5 央行 RSS + CSRC (`8a66b00`);**v2 完整审计 8/14** (`cef00ad`);副业 1 启动 (交易自动化) 持续推进;运动 + 纪律: [待 Jacob 补];认知: **"v2 架构就是 4 个核心 (DB / 简明快讯 / 学习 / 周审) + 单一真相源 (finance-profile.json)"**;W33 计划: v2 实跑 + 4 本书 submodule + cron 安装 | 完成 (代码侧, 生活侧待 Jacob 补) |
+| W33 | Aug 10-16 | **v2 收尾 + 7 本书 + cron 安装周**: v2 审计报告存档 (`cef00ad`);**增强 evening_study 4 能力层** (持仓 awareness / 结构化 principles / relevance scoring / judgment 生成, `a2d266d`) + round 3 (动态 principle / 置信度评分 / 7 天 dedup / signal_tracker history, `9456d4a`);**books repo 独立** (4 本新书 PCM/TFS/STI + 3 本原书 + submodule, `2fcf813`, `00f8553`);v2 **crontab 安装** (8 行 jobs + dead-man switch, 8/15);**3 个问题修复**: weekly_review 漏报 / 旧 v1 log 清理 / 周日兜底 cron;**2 个 finance-stack 修复**: 周报代号翻译 + LINT 自检 (`1213b8d`, `49c9192`);**j-plan 周报缺口检测器** + 4 个 j-plan crons 安装 (D.1-D.6);运动 + 纪律: [待 Jacob 补];认知: **"模块 C 从'流水账'升级为'持仓 aware + 结构化原则 + 评分 + 回测'全流程分析系统"**;下周: W34 待 Jacob 输入 | 完成 (代码侧, 生活侧待 Jacob 补) |
+| 2026-Aug | **8 月整体规划 (待 Jacob 输入 W31 提出的 4 问题答案)**:<br>1. **副业 1 (交易自动化)**: [W32+ 启动] 优先级? 时间投入 (周末 8h/周)?<br>2. **副业 2 (city walk/情侣)**: [W32+ 启动] vs 工作日/周末?<br>3. **25m 独立游**: 推 5 周, [W32 周末做 8/8-9] 完成情况?<br>4. **纪律抬档**: W29 均分 3.5 → 目标 3.8+, 8 月路径?<br>**已知 8 月事实**: finance-advisor v2 实跑 + 7 本书 + 4 j-plan cron 安装 + 3 问题修复 + LINT 自检上线. 运动 / 睡眠 / 8/8-8/15 副业启动情况 [Jacob 补] | 进行中 (框架已立, Jacob 待补具体项) |
 | 2026-Apr | 睡眠加强、父母体检、绍兴游、马来西亚游 | 进行中 |
 | 2026-Mar | 学习、睡觉、运动平稳 | 完成 |
 | 2026-Feb | 春节、牙齿、工作调整、感情 | 完成 |
