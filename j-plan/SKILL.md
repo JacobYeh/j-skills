@@ -5,6 +5,14 @@ description: Jacob's personal planning and reminder system. Manages yearly, mont
 
 # J-Plan — Personal Planning & Reminder System
 
+## Push 模板变量 (host 替换)
+
+cron prompt 推送时使用的占位符, 由 host 在调 push-hub 前替换:
+- `{{FEISHU_USER_OPEN_ID}}` — Jacob 个人飞书 open_id (从 push-hub chat config 取)
+- `{{FEISHU_CHAT_ID}}` — 群 chat_id (群推送时用)
+
+**不要**直接复制 `{{...}}` 到 push 调用, 必须 host 层替换.
+
 ## Overview
 
 Jacob's planning assistant that tracks yearly, monthly, and weekly plans with full history. Provides AI summaries, queries past records, and delivers weekly reports via Feishu.
@@ -73,7 +81,7 @@ A weekly cron job (`J-Plan-Weekly-Review`) runs every **Sunday 8:00 PM (Asia/Sha
 
 #### Step 1 — AI 推送（开篇问候 + 5 字段收件箱）
 
-> 💬 推送内容模板（发送至 Jacob via Feishu DM, `user:ou_xxx — 从 push-hub chat config 自动取`）：
+> 💬 推送内容模板（发送至 Jacob via Feishu DM, `user:{{FEISHU_USER_OPEN_ID}} — 从 push-hub chat config 自动取`）：
 > 
 > ```
 > 周日 8 点了, 走个 30 秒版
@@ -239,7 +247,7 @@ All four jobs send directly to Jacob via Feishu DM and wait for his reply before
 3. 短结尾: "周一早上 9 点 09:00 你确认下要不要调"
 4. 等回复. 收到后写回 planning.md 对应周的"跨期任务"区 (不重写其他部分).
 
-Target: Jacob 个人 DM (user:ou_xxx — 从 push-hub chat config 自动取)
+Target: Jacob 个人 DM (user:{{FEISHU_USER_OPEN_ID}} — 从 push-hub chat config 自动取)
 ```
 
 **改动点（vs 老版）：**
@@ -274,7 +282,7 @@ Target: Jacob 个人 DM (user:ou_xxx — 从 push-hub chat config 自动取)
    - **如果 5 字段分 < 3，加一句 (≤ 2 行) 观察；否则静默结束**
    - **不追问**
 
-Target: Jacob 个人 DM (user:ou_xxx — 从 push-hub chat config 自动取)
+Target: Jacob 个人 DM (user:{{FEISHU_USER_OPEN_ID}} — 从 push-hub chat config 自动取)
 ```
 
 **改动点（vs 老版）：**
