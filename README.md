@@ -65,6 +65,20 @@ git clone https://github.com/JacobYeh/finance-stack.git
 # - 跨 skill 调用 (j-plan + finance-advisor 一起规划)
 ```
 
+### 共享 secrets path (跨 4 repo)
+
+`~/.config/finance-advisor/secrets/secrets.env` 是 **finance-stack + j-skills + push-hub 共享**的 secrets 单点:
+
+- 来源: `~/projects/secrets/secrets.env.age` (age-encrypted)
+- 解密: `~/.bashrc` lines 128-134 (login 时自动)
+- 包含: `FEISHU_APP_ID/SECRET/CHAT_ID/USER_OPEN_ID` + 8 个其他 key
+
+被 4 处引用,改名/迁移时**必须同步**:
+1. `~/projects/secrets/secrets.env.age` (源)
+2. `~/.bashrc` lines 128-134 (decrypt block)
+3. `~/projects/finance-stack/skills/finance-advisor/scripts/workspace.py` (PROFILE_FILE 等)
+4. push-hub `cli.py:74` + `channels/feishu_app.py:15` + `channels/feishu_webhook.py:16`
+
 ## 🛠️ 维护规则
 
 1. **每次重大事件后更新** (换工作/年度复盘) — 推一次 commit
